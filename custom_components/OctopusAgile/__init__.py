@@ -170,6 +170,8 @@ def setup(hass, config):
         # Update the next days rates
         new_rates = myrates.get_new_rates()["date_rates"]
         hass.states.set("octopusagile.rates", "", new_rates)
+        export_rates = myrates.get_new_export_rates()["date_rates"]
+        hass.states.set("octopusagile.export_rates", "", export_rates)
 
         # Get next best time to run devices
         devices = config["octopusagile"]["run_devices"]
