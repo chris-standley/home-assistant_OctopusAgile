@@ -436,7 +436,7 @@ class MaxExportRate(Entity):
         # self._hass = hass
         self._attributes = {}
         self.hass = hass
-        self.entity_id = "sensor.octopus_agile_min_rate"
+        self.entity_id = "sensor.octopus_agile_max_export_rate"
         # if "region_code" not in self.config["OctopusAgile"]:
         #     _LOGGER.error("region_code must be set for OctopusAgile")
         # else:
@@ -447,7 +447,7 @@ class MaxExportRate(Entity):
     @property
     def name(self):
         """Return the name of the sensor."""
-        return 'Octopus Agile Minimum Rate'
+        return 'Octopus Agile Maximum Export Rate'
 
     @property
     def state(self):
